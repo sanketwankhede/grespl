@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CANVAS</title>
+
+</head>
+<body>
+	<canvas id="my_canvas" width="150" height="150"> Fallback content here </canvas>
+	<canvas id="myCanvas1" width="300" height="100" style="border:1px solid #d3d3d3;float:right;"></canvas>
+	<canvas id="myCanvas2" width="200" height="100" style="border:5px solid #d3d3d3;"></canvas>
+	<canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById('my_canvas'); 
+		if (canvas.getContext){ 
+			var context = canvas.getContext('2d');
+		}else
+		{ 	// do something to show the canvas's hidden contents 
+			// or let the browser display the text within the <canvas> element. 
+		} 
+		context.fillStyle = "rgb(200,0,0)"; 
+		context.fillRect (10, 10, 100, 100);
+		context.fillStyle = "rgb(200,0,0)"; 
+		context.fillRect (10, 10, 100, 100); 
+		context.fillStyle = "rgb(0,200,0)"; 
+		context.fillRect (20, 20, 100, 100);
+		context.fillStyle = "rgb(0,0,200)"; 
+		context.fillRect (30, 30, 100, 100);
+
+		var canvas = document.getElementById("myCanvas2");
+		var ctx = canvas.getContext("2d");
+		ctx.beginPath();
+		ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+		ctx.stroke(); 
+
+		
+
+		var c = document.getElementById("myCanvas1");
+		var ctx = c.getContext("2d");
+		ctx.font = "30px Arial";
+		ctx.strokeText("Hello Sanket", 10, 50); 
+
+		
+
+		var c = document.getElementById("myCanvas3");
+		var ctx = c.getContext("2d");
+
+		// Create gradient
+		var grd = ctx.createLinearGradient(0,0,150,0);
+		grd.addColorStop(0,"red");
+		grd.addColorStop(1,"yellow");
+
+		// Fill with gradient
+		ctx.fillStyle = grd;
+		ctx.fillRect(10,10,180,80);
+
+
+		
+	
+
+	</script>
+	
+
+
+
+</body>
+</html>

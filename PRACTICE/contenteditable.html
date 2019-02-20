@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/editablestyle.css">
+</head>
+<body id="forms">
+	<div id="edit">
+		<h1>User information</h1>
+		<section id="edit_profile_link"> 
+			<p>
+				<a href="edit.html">Edit Your Profile</a>
+			</p> 
+		</section> 
+		
+		 
+		<ul data-url="/users/1"> 
+			<li> <b>Name</b> <span id="name" contenteditable>Hugh Mann</span> </li> 
+			<li> <b>City</b> <span id="city" contenteditable>Anytown</span> </li> 
+			<li> <b>State</b> <span id="state" contenteditable>OH</span> </li> 
+			<li> <b>Postal Code</b> <span id="postal_code" contenteditable>92110</span> </li> 
+			<li> <b>Email</b> <span id="email" contenteditable>boss@awesomecompany.com</span> </li> 
+		</ul>
+	</div>		
+
+
+	<!--Table-->
+<div id="table">
+	<table> 
+		<tr> 
+			<th>Item</th> 
+			<th>Price</th>
+			<th>Quantity</th> 
+			<th>Total</th> 
+		</tr> 
+		<tr> 
+			<td>Coffee mug</td> 
+			<td>$10.00</td> 
+			<td>5</td> 
+			<td>$50.00</td> 
+		</tr> 
+		<tr> 
+			<td>Polo shirt</td> 
+			<td>$20.00</td> 
+			<td>5</td> 
+			<td>$100.00</td> 
+		</tr> 
+		<tr> 
+			<td>Red stapler</td> 
+			<td>$9.00</td> 
+			<td>4</td> 
+			<td>$36.00</td> 
+		</tr> 
+		<tr> 
+			<td colspan="3">Subtotal</td> 
+			<td>$186.00</td> 
+		</tr> 
+		<tr> 
+			<td colspan="3">Shipping</td> 
+			<td>$12.00</td> 
+		</tr> 
+		<tr> 
+			<td colspan="3">Total Due</td> 
+			<td>$198.00</td> 
+		</tr> 
+	</table>
+</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script> 
+	<script src="js/edit.js"></script> 
+
+</body>
+</html>

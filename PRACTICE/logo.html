@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGO</title>
+</head>
+<body>
+	
+	<canvas id="logo" width="900" height="100"> <h1>AwesomeCo</h1> </canvas>
+
+	<script type="text/javascript">
+		
+		var drawLogo = function(){ 
+			var canvas = document.getElementById("logo"); 
+			var context = canvas.getContext("2d"); 
+		context.fillStyle = "#FF0000"; 
+		context.strokeStyle = "#FF0000";
+		context.lineWidth = 2; 
+		
+		context.beginPath(); 
+		context.moveTo(0, 40); 
+		context.lineTo(30, 0); 
+
+	 
+		context.moveTo(30, 0); 
+		context.lineTo(60, 40); 
+
+
+		context.moveTo(60, 40); 
+		context.lineTo(280, 40); 		
+
+		 
+		context.closePath();
+		context.stroke();
+		
+		context.font = "italic 40px 'Arial'"; 
+		context.fillText("AwesomeCo", 60, 36);
+		};
+		
+		var canvas = document.getElementById("logo");
+		if (canvas.getContext){ drawLogo(); 
+		}
+
+
+
+	</script>
+</body>
+</html>

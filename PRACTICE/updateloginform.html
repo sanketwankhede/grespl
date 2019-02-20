@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN FORM</title>
+	<script type="text/javascript">
+		function write_name(){
+			var welcome_parra = document.getElementById("welcome");
+			var name = document.getElementById('name');
+			var name1 = document.getElementById('Lname');
+			var city = document.getElementById('city');
+
+			welcome_parra.innerHTML = "Welcome : " + name.value  + " "  + name1.value + "<br/>City : " + city.value;
+			
+		}
+		function submitData(){
+		}
+	</script>
+</head>
+<body>
+	<p id="welcome"></p>
+	<form>
+			<li>
+				<label for="name">First name:</label>
+				<input type="text" id="name"><br>
+				<label for="Last Name">Last Name:</label>	
+				<input type="text" id="Lname"/><br>
+				<label for="city">City:</label>
+				<input type="text" id="city"><br>
+				<input type="button" value="done" onclick="write_name();"/>
+			</li>	
+	</form>
+
+	<form action="/users/1" method="post" accept-charset="utf-8"> 
+		<fieldset id="your_information"> 
+			<legend>Your Information</legend> 
+				<ol> 
+					<li> 
+						<label for="name">Your Name</label> 
+						<input type="text" name="name" value="" id="name1"> 
+					</li> 
+					<li> 
+						<label for="city">City</label> 
+						<input type="text" name="city" value="" id="city"> 
+					</li>
+					<li> 
+						<label for="state">State</label> 
+						<input type="text" name="state" value="" id="state"> 
+					</li> 
+					<li> 
+						<label for="postal_code">Postal Code</label> 
+						<input type="text" name="postal_code" value="" id="postal_code"> 
+					</li> 
+					<li> 
+						<label for="email">Email</label> 
+						<input type="email" name="email" value="" id="email"> 
+					</li> 
+				</ol>
+		</fieldset> 
+			<p>
+				<input type="submit" value="Save" onsubmit="submitData()">
+			</p> 
+	</form>
+
+</body>
+</html>

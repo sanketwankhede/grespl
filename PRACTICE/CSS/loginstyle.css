@@ -1,0 +1,7 @@
+.login{ width: 50%; clear: both;margin-left: 20px;  }
+.login fieldset{ background-color: #ddd; border: 2px; width: 50%;  } 
+.login legend{ background-color: #ddd; padding: 0 64px 0 2px;  width: 50%; }
+.login ol{list-style: none; margin: 2px; padding:0;  } 
+.login li{ margin: 0 0 9px 0; padding: 0; }
+.login input{ background-color: #fff; border: 1px solid #bbb; display:block; width: 200px; } 
+.login input[type="submit"]{ background-color: #bbb; padding: 0; width: 202px; }

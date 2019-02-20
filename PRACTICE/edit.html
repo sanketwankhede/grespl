@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editable Profile</title>
+	<link rel="stylesheet" type="text/css" href="css/editstyle.css">
+	<script type="text/javascript">
+		function write_name(){
+			var welcome_parra = document.getElementById("welcome");
+			var name = document.getElementById('name');
+
+			welcome_parra.innerHTML = "welcome : " + name.value;
+	</script>
+</head>
+<body>
+	<form action="/users/1" method="post" accept-charset="utf-8"> 
+		<fieldset id="your_information"> 
+			<legend>Your Information</legend> 
+				<ol> 
+					<li> 
+						<label for="name">Your Name</label> 
+						<input type="text" name="name" value="" id="name"> 
+					</li> 
+					<li> 
+						<label for="city">City</label> 
+						<input type="text" name="city" value="" id="city"> 
+					</li>
+					<li> 
+						<label for="state">State</label> 
+						<input type="text" name="state" value="" id="state"> 
+					</li> 
+					<li> 
+						<label for="postal_code">Postal Code</label> 
+						<input type="text" name="postal_code" value="" id="postal_code"> 
+					</li> 
+					<li> 
+						<label for="email">Email</label> 
+						<input type="email" name="email" value="" id="email"> 
+					</li> 
+				</ol>
+		</fieldset> 
+			<p>
+				<input type="submit" value="Save" onsubmit="submitData()">
+			</p> 
+	</form>
+
+
+</body>
+</html>
